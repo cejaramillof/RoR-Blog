@@ -1,0 +1,446 @@
+.col-sm-12.content-box
+  .row.row-featured
+    %div{:style => "clear: both"}
+    .relative.content.clearfix
+      %div
+        .tab-lite
+            / Nav tabs
+          %ul.nav.nav-tabs{:role => "tablist"}
+            %li.active{:role => "presentation"}
+              %a{"aria-controls" => "tab1", "aria-expanded" => "true", "data-toggle" => "tab", :href => "#tab1", :role => "tab"}
+                %i.icon-th>
+                Artículos
+            %li{:role => "presentation"}
+              %a{"aria-controls" => "tab2", "aria-expanded" => "false", "data-toggle" => "tab", :href => "#tab2", :role => "tab"}
+                %i.icon-doc-1>
+                Escritos
+            %li{:role => "presentation"}
+              %a{"aria-controls" => "tab3", "aria-expanded" => "false", "data-toggle" => "tab", :href => "#tab3", :role => "tab"}
+                %i.icon-videocam>
+                Videos
+            %li{:role => "presentation"}
+              %a{"aria-controls" => "tab3", "aria-expanded" => "false", "data-toggle" => "tab", :href => "#tab4", :role => "tab"}
+                %i.icon-megaphone-1>
+                Audios
+            / Tab panes
+          .tab-content
+            #tab1.tab-pane.active{:role => "tabpanel"}
+              .col-lg-12.tab-inner
+                .row
+                  %ul.cat-list.col-xxs-12
+                    %li
+                      %a{:href => "job-list.html"} Atlanta
+                    %li
+                      %a{:href => "job-list.html"} Dallas
+                    %li
+                      %a{:href => "job-list.html"} New York
+                    %li
+                      %a{:href => "job-list.html"} Santa Ana/Anaheim
+                    %li
+                      %a{:href => "job-list.html"} Wichita
+                    %li
+                      %a{:href => "job-list.html"} Anchorage
+                    %li
+                      %a{:href => "job-list.html"} Miami
+                    %li
+                      %a{:href => "job-list.html"} Los Angeles
+            #tab2.tab-pane{:role => "tabpanel"}
+              .col-lg-12.tab-inner
+                .row
+                  %ul.cat-list.cat-list-border.col-xxs-12
+                    %li
+                      %a{:href => "job-list.html"}
+                        Full Time Jobs
+                    %li
+                      %a{:href => "job-list.html"}
+                        Part Time Jobs
+                        Retail Jobs
+                    %li
+                      %a{:href => "job-list.html"}
+                        Construction Jobs
+                    %li
+                      %a{:href => "job-list.html"}
+                        Marketing Jobs
+                    %li
+                      %a{:href => "job-list.html"}
+                        Accounting Jobs
+                        Customer Service Jobs
+                    %li
+                      %a{:href => "job-list.html"}
+                        Security Jobs
+                    %li
+                      %a{:href => "job-list.html"}
+                        Engineering Jobs
+                    %li
+                      %a{:href => "job-list.html"}
+                        Maintenance Jobs
+            #tab3.tab-pane{:role => "tabpanel"}
+              .col-lg-12.tab-inner
+                .row
+                  %ul.cat-list.cat-list-border.col-xxs-12
+                    %li
+                      %a{:href => "job-list.html"}
+                        Aramark Jobs  Careers
+                    %li
+                      %a{:href => "job-list.html"}
+                        AT Jobs  Careers
+                    %li
+                      %a{:href => "job-list.html"}
+                        Armellini Jobs  Careers
+                    %li
+                      %a{:href => "job-list.html"}
+                        Aflac Jobs  Careers
+                    %li
+                      %a{:href => "job-list.html"}
+                        Avon Jobs  Careers
+                    %li
+                      %a{:href => "job-list.html"}
+                        Aon Service Corporation Jobs  Careers
+                    %li
+                      %a{:href => "job-list.html"}
+                        AmeriBanc National Jobs  Careers
+                    %li
+                      %a{:href => "job-list.html"}
+                        ASML Jobs  Careers
+            #tab4.tab-pane{:role => "tabpanel"}
+              .col-lg-12.tab-inner
+                .row
+                  %ul.cat-list.col-xxs-12
+                    %li
+                      %a{:href => "job-list.html"} Atlanta
+                    %li
+                      %a{:href => "job-list.html"} Dallas
+                    %li
+                      %a{:href => "job-list.html"} New York
+                    %li
+                      %a{:href => "job-list.html"} Santa Ana/Anaheim
+                    %li
+                      %a{:href => "job-list.html"} Wichita
+                    %li
+                      %a{:href => "job-list.html"} Anchorage
+                    %li
+                      %a{:href => "job-list.html"} Miami
+                    %li
+                      %a{:href => "job-list.html"} Los Angeles
+%div{:style => "clear: both"}
+.main-container
+  .container
+    .row
+      .col-sm-3.page-sidebar.col-thin-left.hidden-xs
+        %aside
+          -#.inner-box.no-padding
+          -#  .inner-box-content
+          -#    %a{:href => "#"}
+          -#      %img.img-responsive{:alt => "tv", :src => "images/site/app.jpg"}/
+          .inner-box
+            %h2.title-2 Menú
+            .inner-box-content
+              %ul.cat-list.arrow
+                %li
+                  %a{:href => "job-list.html"}
+                    En vivos
+                    %span.count (123)
+                %li
+                  %a{:href => "job-list.html"}
+                    Ebooks
+                    %span.count (403)
+                %li
+                  %a{:href => "job-list.html"}
+                    Motivación
+                    %span.count (3,189)
+                %li
+                  %a{:href => "job-list.html"}
+                    Lesiones
+                    %span.count (2,531)
+                %li
+                  %a{:href => "job-list.html"}
+                    Nutrición
+                    %span.count (12,578)
+                %li
+                  %a{:href => "job-list.html"}
+                    Entrenamiento
+                    %span.count (4,546)
+          .inner-box.no-padding
+            %img.img-responsive{:alt => "", :src => "/assets/add2.jpg"}/
+      .col-sm-9.page-content.col-thin-right
+        .content-box.col-lg-12
+          .row.row-featured.row-featured-category
+            .col-lg-12.box-title.no-border
+              .inner
+                %h2
+                  %span Últimos
+                  artículos
+                  %a.sell-your-item{:href => "job-list.html"}
+                    Ver todos
+                    %i.icon-th-list
+            .adds-wrapper.jobs-list
+              .item-list.job-item
+                .col-sm-1.col-xs-2.no-padding.photobox
+                  .add-image
+                    %a{:href => ""}
+                      %img.thumbnail.no-margin{:alt => "post image", :src => "/assets/company-logos/1.jpg"}/
+                / /.photobox
+                .col-sm-10.col-xs-10.add-desc-box
+                  .add-details.jobs-item
+                    %h5.company-title
+                      %a{:href => ""} Audio
+                    %h4.job-title
+                      %a{:href => "job-details.html"} Nutrición en simios
+                    %span.info-row
+                      %span.salary
+                        %i.icon-tag
+                        Nutrición
+                      %span.date
+                        %i.icon-calendar-1>
+                        01/01/2018
+                      %span.item-location
+                        %i.icon-user-3
+                        Carlos Jaramillo
+                    .jobs-desc
+                      Este audio habla sobre la nutrición en micos Jaja.
+                / /.add-desc-box
+                / /.add-desc-box
+              / /.job-item
+              .item-list.job-item
+                .col-sm-1.col-xs-2.no-padding.photobox
+                  .add-image
+                    %a{:href => ""}
+                      %img.thumbnail.no-margin{:alt => "post image", :src => "/assets/company-logos/1.jpg"}/
+                / /.photobox
+                .col-sm-10.col-xs-10.add-desc-box
+                  .add-details.jobs-item
+                    %h5.company-title
+                      %a{:href => ""} Video
+                    %h4.job-title
+                      %a{:href => "job-details.html"} Entrenamiento en simios
+                    %span.info-row
+                      %span.salary
+                        %i.icon-tag
+                        Entrenamiento
+                      %span.date
+                        %i.icon-calendar-1>
+                        01/01/2018
+                      %span.item-location
+                        %i.icon-user-3
+                        Carlos Jaramillo
+                    .jobs-desc
+                      Este video habla sobre el entrenamiento en micos Jaja.
+                / /.add-desc-box
+                / /.add-desc-box
+              / /.job-item
+              .item-list.job-item
+                .col-sm-1.col-xs-2.no-padding.photobox
+                  .add-image
+                    %a{:href => ""}
+                      %img.thumbnail.no-margin{:alt => "post image", :src => "/assets/company-logos/1.jpg"}/
+                / /.photobox
+                .col-sm-10.col-xs-10.add-desc-box
+                  .add-details.jobs-item
+                    %h5.company-title
+                      %a{:href => ""} Audio
+                    %h4.job-title
+                      %a{:href => "job-details.html"} Nutrición en simios
+                    %span.info-row
+                      %span.salary
+                        %i.icon-tag
+                        Nutrición
+                      %span.date
+                        %i.icon-calendar-1>
+                        01/01/2018
+                      %span.item-location
+                        %i.icon-user-3
+                        Carlos Jaramillo
+                    .jobs-desc
+                      Este audio habla sobre la nutrición en micos Jaja.
+                / /.add-desc-box
+                / /.add-desc-box
+              / /.job-item
+              .item-list.job-item
+                .col-sm-1.col-xs-2.no-padding.photobox
+                  .add-image
+                    %a{:href => ""}
+                      %img.thumbnail.no-margin{:alt => "post image", :src => "/assets/company-logos/1.jpg"}/
+                / /.photobox
+                .col-sm-10.col-xs-10.add-desc-box
+                  .add-details.jobs-item
+                    %h5.company-title
+                      %a{:href => ""} Video
+                    %h4.job-title
+                      %a{:href => "job-details.html"} Entrenamiento en simios
+                    %span.info-row
+                      %span.salary
+                        %i.icon-tag
+                        Entrenamiento
+                      %span.date
+                        %i.icon-calendar-1>
+                        01/01/2018
+                      %span.item-location
+                        %i.icon-user-3
+                        Carlos Jaramillo
+                    .jobs-desc
+                      Este video habla sobre el entrenamiento en micos Jaja.
+                / /.add-desc-box
+                / /.add-desc-box
+              / /.job-item
+              .item-list.job-item
+                .col-sm-1.col-xs-2.no-padding.photobox
+                  .add-image
+                    %a{:href => ""}
+                      %img.thumbnail.no-margin{:alt => "post image", :src => "/assets/company-logos/1.jpg"}/
+                / /.photobox
+                .col-sm-10.col-xs-10.add-desc-box
+                  .add-details.jobs-item
+                    %h5.company-title
+                      %a{:href => ""} Audio
+                    %h4.job-title
+                      %a{:href => "job-details.html"} Nutrición en simios
+                    %span.info-row
+                      %span.salary
+                        %i.icon-tag
+                        Nutrición
+                      %span.date
+                        %i.icon-calendar-1>
+                        01/01/2018
+                      %span.item-location
+                        %i.icon-user-3
+                        Carlos Jaramillo
+                    .jobs-desc
+                      Este audio habla sobre la nutrición en micos Jaja.
+                / /.add-desc-box
+                / /.add-desc-box
+              / /.job-item
+            .tab-box.save-search-bar.text-center
+              %a.text-uppercase{:href => "job-list.html"}
+                %i.icon-plus
+                Ver más artículos
+    %div{:style => "clear: both"}
+    .col-lg-12.content-box
+      .row.row-featured.row-featured-category
+        .col-lg-12.box-title.no-border
+          .inner
+            %h2
+              %span videos por
+              Musculo
+              %a.sell-your-item{:href => "category.html"}
+                Ver todos
+                %i.icon-th-list
+        .col-lg-2.col-md-3.col-sm-3.col-xs-4.f-category
+          %a{:href => "category.html"}
+            =image_tag('muscles/icons8-neck-96.png', :class => 'img-responsive')
+            %h6 Trapecios
+        .col-lg-2.col-md-3.col-sm-3.col-xs-4.f-category
+          %a{:href => "category.html"}
+            =image_tag('muscles/icons8-bodybuilder-96.png', :class => 'img-responsive')
+            %h6 Espalda
+        .col-lg-2.col-md-3.col-sm-3.col-xs-4.f-category
+          %a{:href => "category.html"}
+            =image_tag('muscles/icons8-shoulders-96.png', :class => 'img-responsive')
+            %h6 Hombros
+        .col-lg-2.col-md-3.col-sm-3.col-xs-4.f-category
+          %a{:href => "category.html"}
+            =image_tag('muscles/icons8-biceps-96.png', :class => 'img-responsive')
+            %h6 Biceps
+        .col-lg-2.col-md-3.col-sm-3.col-xs-4.f-category
+          %a{:href => "category.html"}
+            =image_tag('muscles/icons8-triceps-96.png', :class => 'img-responsive')
+            %h6 Triceps
+        .col-lg-2.col-md-3.col-sm-3.col-xs-4.f-category
+          %a{:href => "category.html"}
+            =image_tag('muscles/icons8-muscle-96.png', :class => 'img-responsive')
+            %h6 Antebrazo
+        .col-lg-2.col-md-3.col-sm-3.col-xs-4.f-category
+          %a{:href => "category.html"}
+            =image_tag('muscles/icons8-chest-96.png', :class => 'img-responsive')
+            %h6 Pecho
+        .col-lg-2.col-md-3.col-sm-3.col-xs-4.f-category
+          %a{:href => "category.html"}
+            =image_tag('muscles/icons8-prelum-96.png', :class => 'img-responsive')
+            %h6 Abdominales
+        .col-lg-2.col-md-3.col-sm-3.col-xs-4.f-category
+          %a{:href => "category.html"}
+            =image_tag('muscles/icons8-cuadriceps-96.png', :class => 'img-responsive')
+            %h6 Cuadriceps
+        .col-lg-2.col-md-3.col-sm-3.col-xs-4.f-category
+          %a{:href => "category.html"}
+            =image_tag('muscles/icons8-glutes-96.png', :class => 'img-responsive')
+            %h6 Gluteos
+        .col-lg-2.col-md-3.col-sm-3.col-xs-4.f-category
+          %a{:href => "category.html"}
+            =image_tag('muscles/icons8-hamstrings-96.png', :class => 'img-responsive')
+            %h6 Isquiotibial
+        .col-lg-2.col-md-3.col-sm-3.col-xs-4.f-category
+          %a{:href => "category.html"}
+            =image_tag('muscles/icons8-calves-96.png', :class => 'img-responsive')
+            %h6 Pantorrilla
+        //.col-lg-2.col-md-3.col-sm-3.col-xs-4.f-category
+        //  %a{:href => "category.html"}
+        //    =image_tag('muscles/icons8-glutes-96.png', :class => 'img-responsive')
+        //    %h6 Pierna posterior
+    %div{:style => "clear: both"}
+
+    .row
+      .col-sm-4.blogLeft
+        .blog-post-wrapper
+          %article.blog-post-item
+            .inner-box
+              / blog image
+              .blog-post-img
+                %a{:href => "blog-details.html"}
+                  %figure
+                    %img.img-responsive{:alt => "blog-post image", :src => "assets/4.jpg"}/
+              / blog content
+              .blog-post-content-desc
+                .blog-post-content
+                  %h2
+                    %a{:href => "blog-details.html"} Macronutrientes
+                  %p
+                    Sint, hic, et qui inventore ex perferendis sunt aliquam commodi nihil
+                    vitae. Sint, hic, et qui inventore ex perferendis sunt aliquam.
+                  .row
+                    .col-md-12.clearfix.blog-post-bottom
+                      %a.btn.btn-primary.pull-right{:href => "blog-details.html"}
+                        Conoce más
+      .col-sm-4.blogLeft
+        .blog-post-wrapper
+          %article.blog-post-item
+            .inner-box
+              / blog image
+              .blog-post-img
+                %a{:href => "blog-details.html"}
+                  %figure
+                    %img.img-responsive{:alt => "blog-post image", :src => "assets/4.jpg"}/
+              / blog content
+              .blog-post-content-desc
+                .blog-post-content
+                  %h2
+                    %a{:href => "blog-details.html"} Micronutrientes
+                  %p
+                    Sint, hic, et qui inventore ex perferendis sunt aliquam commodi nihil
+                    vitae. Sint, hic, et qui inventore ex perferendis sunt aliquam.
+                  .row
+                    .col-md-12.clearfix.blog-post-bottom
+                      %a.btn.btn-primary.pull-right{:href => "blog-details.html"}
+                        Conoce más
+      .col-sm-4.blogLeft
+        .blog-post-wrapper
+          %article.blog-post-item
+            .inner-box
+              / blog image
+              .blog-post-img
+                %a{:href => "blog-details.html"}
+                  %figure
+                    %img.img-responsive{:alt => "blog-post image", :src => "assets/4.jpg"}/
+              / blog content
+              .blog-post-content-desc
+                .blog-post-content
+                  %h2
+                    %a{:href => "blog-details.html"} Suplementación
+                  %p
+                    Sint, hic, et qui inventore ex perferendis sunt aliquam commodi nihil
+                    vitae. Sint, hic, et qui inventore ex perferendis sunt aliquam.
+                  .row
+                    .col-md-12.clearfix.blog-post-bottom
+                      %a.btn.btn-primary.pull-right{:href => "blog-details.html"}
+                        Conoce más
+    %div{:style => "clear: both"}
+    

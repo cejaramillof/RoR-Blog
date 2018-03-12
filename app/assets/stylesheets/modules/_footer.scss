@@ -46,7 +46,6 @@
   }
   .paymanet-method-logo img {
     display: inline-block;
-    height: 20px;
     margin: 0 2px;
   }
 }
@@ -88,8 +87,7 @@
   text-transform: uppercase;
   img {
     display: inline-block;
-    margin: 0 5px;
-    height: 30px;
+    margin: 0 5px;    
   }
   @include breakpoint($mobile) {
     padding: 15px 0;
