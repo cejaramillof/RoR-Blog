@@ -1,0 +1,128 @@
+.header.navbar-fixed-top
+  %nav.navbar.navbar-site.navbar-default{:role => "navigation"}
+    .container
+      .navbar-header
+        %button.navbar-toggle{"data-target" => ".navbar-collapse", "data-toggle" => "collapse", :type => "button"}
+          %span.sr-only Toggle navigation
+          %span.icon-bar
+          %span.icon-bar
+          %span.icon-bar
+        =link_to root_path, class: 'navbar-brand logo logo-title' do
+          / Original Logo will be placed here
+          %span.logo-icon
+            %i.ln-shadow-logo
+              =image_tag('logo.png', class: "ln-shadow-logo", style:"padding: 5px;")
+          %span Entrenamiento
+          Diferencial
+      .navbar-collapse.collapse
+        %ul.nav.navbar-nav.navbar-right
+          %li
+            %a{:href => "category.html"}
+              %i.icon-user.fa
+              Biomecánica
+          %li.dropdown
+            %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
+              %span Menu
+              %i.icon-th-thumb
+              %i.icon-down-open-big.fa
+            %ul.dropdown-menu.user-menu
+              -#
+                %li
+                  %a{:href => "account-home.html"}
+                    %i.fa.fa-hand-o-right.fa-fw
+                    En vivos
+                %li
+                  %a{:href => "account-home.html"}
+                    %i.fa.fa-book.fa-fw
+                    eBooks
+              %li.dropdown-submenu
+                %a.test{:tabindex => "-1"}
+                  %i.fa.fa-smile-o.fa-fw
+                  Motivación
+                  %span.caret
+                %ul.dropdown-menu
+                  %li
+                    %a{:href => "#", :tabindex => "-1"} 2nd level dropdown
+                  %li
+                    %a{:href => "#", :tabindex => "-1"} 2nd level dropdown
+              %li.dropdown-submenu
+                %a.test{:tabindex => "-1"}
+                  %i.fa.fa-medkit.fa-fw
+                  Recuperación
+                  %span.caret
+                %ul.dropdown-menu
+                  %li
+                    %a{:href => "#", :tabindex => "-1"} 2nd level dropdown
+                  %li
+                    %a{:href => "#", :tabindex => "-1"} 2nd level dropdown
+              %li.dropdown-submenu
+                %a.test{:tabindex => "-1"}
+                  %i.fa.fa-cutlery.fa-fw
+                  Nutrición
+                  %span.caret
+                %ul.dropdown-menu
+                  %li
+                    %a{:href => "#", :tabindex => "-1"} 2nd level dropdown
+                  %li
+                    %a{:href => "#", :tabindex => "-1"} 2nd level dropdown
+              %li.dropdown-submenu
+                %a.test{:tabindex => "-1"}
+                  %i.fa.fa-male.fa-fw
+                  Entrenamiento
+                  %span.caret
+                %ul.dropdown-menu
+                  %li
+                    %a{:href => "#", :tabindex => "-1"} 2nd level dropdown
+                  %li
+                    %a{:href => "#", :tabindex => "-1"} 2nd level dropdown
+
+          %li.postadd
+            %a.btn.btn-block.btn-border.btn-post.btn-danger{:href => "post-ads.html"} ¿PREPARADO/A?
+          -#%li.dropdown.lang-menu
+          -#  %button.btn.btn-default.dropdown-toggle{"data-toggle" => "dropdown", :type => "button"}
+          -#    %span.lang-title EN
+          -#    %span.caret
+          -#  %ul.dropdown-menu.user-menu{:role => "menu"}
+          -#    %li
+          -#      %a.active
+          -#        %span.lang-name English
+          -#    %li
+          -#      %a
+          -#        %span.lang-name Dutch
+          -#    %li
+          -#      %a
+          -#        %span.lang-name fran&#xE7;ais
+          -#    %li
+          -#      %a
+          -#        %span.lang-name Deutsch
+          -#    %li
+          -#      %a
+          -#        %span.lang-name Arabic
+          -#    %li
+          -#      %a
+          -#        %span.lang-name Spanish
+      / /.nav-collapse
+    / /.container-fluid
+:javascript
+  $(function () {
+    $('.navbar-collapse').on('shown.bs.collapse', function(e) {
+      $('.dropdown-toggle').dropdown('toggle', 'open').hide();
+      console.log('shown:', e);
+    });
+  })
+  $(function() {
+    $(document).click(function (event) {
+      $('.navbar-collapse').collapse('hide');
+    });
+  });
+  $(document).ready(function(){
+    $('.dropdown-submenu a.test').on("click", function(e){
+      //$(this).parent().parent().find('ul').hide();
+      //$(this).parent().parent().find('.dropdown-submenu .dropdown-menu').hide();
+      //$(this).next('ul').toggle();
+      e.stopPropagation();
+      e.preventDefault();
+      $(this).parent().siblings().removeClass('open');
+      $(this).parent().toggleClass('open');
+    });
+  });
