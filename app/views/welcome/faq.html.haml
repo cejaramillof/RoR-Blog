@@ -1,0 +1,41 @@
+.intro-inner
+  .about-intro.about-parallax-bottom
+    .dtable.hw100
+      .dtable-cell.hw100
+        .container.text-center
+          %h1.intro-title.animated.fadeInDown Preguntas Frecuentes
+  / /.about-intro
+/ /.intro-inner
+.main-container.inner-page
+  .container
+    .section-content
+      .row
+        %h1.text-center.title-1
+          Entrenamiento
+          %strong Diferencial
+        %hr.center-block.small.text-hr/
+      .faq-content
+        #accordion.panel-group.faq-panel{"aria-multiselectable" => "true", :role => "tablist"}
+          .panel
+            #headingOne.panel-heading{:role => "tab"}
+              %h4.panel-title
+                %a{"aria-controls" => "collapseOne", "aria-expanded" => "false", "data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#collapseOne"}
+                  How do I place an ad?
+            #collapseOne.panel-collapse.collapse{"aria-labelledby" => "headingOne", :role => "tabpanel"}
+              .panel-body
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam consectetur sit
+                amet ante nec vulputate. Nulla aliquam, justo auctor consequat tincidunt, arcu erat
+                mattis lorem, lacinia lacinia dui enim at eros. Pellentesque ut gravida augue. Duis
+                ac dictum tellus
+                %br/
+                %br/
+                Pellentesque in mauris placerat, porttitor lorem id, ornare nisl. Pellentesque
+                rhoncus convallis felis, in egestas libero. Donec et nibh dapibus, sodales nisi
+                quis, fringilla augue. Donec dui quam, egestas in varius ut, tincidunt quis ipsum.
+                Nulla nec odio eu nisi imperdiet dictum.
+                %br/
+                %br/
+                Curabitur sed leo dictum, convallis lorem eu, suscipit mi. Mauris viverra blandit
+                varius. Proin non sem turpis. Etiam fringilla hendrerit nunc at accumsan. Duis
+                mollis auctor lobortis.
+= render 'partials/iconmenu'

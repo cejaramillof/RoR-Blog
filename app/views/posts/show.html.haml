@@ -1,0 +1,18 @@
+%p#notice= notice
+
+%p
+  %b Title:
+  = @post.title
+%p
+  %b Free:
+  = @post.free
+%p
+  %b Athlete:
+  = @post.athlete
+%p
+  %b Advised:
+  = @post.advised
+
+= link_to 'Edit', edit_post_path(@post)
+\|
+= link_to 'Back', posts_path
