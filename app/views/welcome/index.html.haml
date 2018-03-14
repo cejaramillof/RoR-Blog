@@ -35,50 +35,5 @@
                       %h3.no-margin.no-padding.link-color.uppercase Richard Aki
                       .text-muted
                         99.8% positive Feedback
-.page-info.hasOverly{:style => "background: linear-gradient(rgba(0, 0, 0, 0.70), rgba(0, 0, 0, 0.70)), url('./assets/bg4.jpg') center center fixed; background-size: cover;"}
-  .bg-overly
-    .container.text-center.section-promo
-      .row
-        .col-sm-4.col-xxs-12
-          .iconbox-wrap
-            .iconbox
-              .iconbox-wrap-icon
-                %i.icon.icon-docs
-              .iconbox-wrap-content
-                %h5
-                  %span 2200
-                .iconbox-wrap-text Artículos
-            / /..iconbox
-          / /.iconbox-wrap
-        .col-sm-4.col-xxs-12
-          .iconbox-wrap
-            .iconbox
-              .iconbox-wrap-icon
-                %i.icon.icon-videocam
-              .iconbox-wrap-content
-                %h5
-                  %span 100
-                .iconbox-wrap-text Ejercicios
-            / /..iconbox
-          / /.iconbox-wrap
-        .col-sm-4.col-xxs-12
-          .iconbox-wrap
-            .iconbox
-              .iconbox-wrap-icon
-                %i.icon.icon-users
-              .iconbox-wrap-content
-                %h5
-                  %span 50,000
-                .iconbox-wrap-text Usuarios
-            / /..iconbox
-          / /.iconbox-wrap
-/ /.page-info
-.page-bottom-info
-  .page-bottom-info-inner
-    .page-bottom-info-content.text-center
-      %h1
-        Si tienes alguna duda con respecto a las asesorías, talleres o seminarios; ¡escríbenos!
-      %a.btn.btn-lg.btn-primary-dark{:href => "https://api.whatsapp.com/send?phone=573014263898", :target => "_blank"}
-        %i.icon-mobile
-        %span.hide-xs.color50 Escribe Ahora:
-        +(57) 301 426 38 98
+= render 'partials/webstats'
+= render 'partials/wppcontact'

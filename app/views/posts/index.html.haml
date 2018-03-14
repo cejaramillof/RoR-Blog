@@ -4,7 +4,9 @@
   %thead
     %tr
       %th Title
+      %th Body
       %th Free
+      %th Guest
       %th Athlete
       %th Advised
       %th
@@ -15,7 +17,9 @@
     - @posts.each do |post|
       %tr
         %td= post.title
+        %td= post.body
         %td= post.free
+        %td= post.guest
         %td= post.athlete
         %td= post.advised
         %td= link_to 'Show', post

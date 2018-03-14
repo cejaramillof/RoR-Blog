@@ -1,0 +1,78 @@
+.intro-inner
+  .contact-intro
+    .w100.map
+      %iframe{:frameborder => "0", :height => "350", :src => "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.290140707069!2d-75.57675368523086!3d6.225423295493529!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e4429cb29984fa9%3A0xafc5274bca9eed92!2sCra.+48+%2320-114%2C+Medell%C3%ADn%2C+Antioquia!5e0!3m2!1ses-419!2sco!4v1521059249653", :style => "border:0", :width => "100%"}
+  / /.contact-intro || map end
+/ /.intro-inner
+.main-container
+  .container
+    .row.clearfix
+      .col-md-4
+        .contact_info
+          %h5.list-title.gray
+            %strong Contact us
+          .contact-info
+            .address
+              %p.p1 220 Fifth Ave
+              %p.p1 2nd Flr. New York, NY 10001
+              %p Email: info@@demos.org
+              %p Toll Free: 212-633-1405
+              %p  
+              %div
+                %p
+                  %strong
+                    %a{:href => "#"} Get a Quote
+                %p
+                  %strong
+                    %a{:href => "login.html"} Client Area Login
+                %p
+                  %strong
+                    %a.skype{:href => "#skypeid"} Live Chat
+                %p
+                  %strong
+                    %a{:href => "faq.html"} Knowledge Base
+          .social-list
+            %a{:href => "https://www.pinterest.com/", :target => "_blank"}
+              %i.fa.fa-whatsapp.fa-lg
+            %a{:href => "https://plus.google.com", :target => "_blank"}
+              %i.fa.fa-instagram.fa-lg
+            %a{:href => "https://twitter.com/", :target => "_blank"}
+              %i.fa.fa-youtube-play.fa-lg
+            %a{:href => "https://www.facebook.com/", :target => "_blank"}
+              %i.fa.fa-facebook.fa-lg
+            %a{:href => "https://twitter.com/", :target => "_blank"}
+              %i.fa.fa-twitter.fa-lg
+            %a{:href => "https://www.pinterest.com/", :target => "_blank"}
+              %i.fa.fa-envelope.fa-lg
+      .col-md-8
+        .contact-form
+          %h5.list-title.gray
+            %strong Contact us
+          %form.form-horizontal{:method => "post"}
+            %fieldset
+              .row
+                .col-sm-6
+                  .form-group
+                    .col-md-12
+                      %input#firstname.form-control{:name => "name", :placeholder => "First Name", :type => "text"}/
+                .col-sm-6
+                  .form-group
+                    .col-md-12
+                      %input#lastname.form-control{:name => "name", :placeholder => "Last  Name", :type => "text"}/
+                .col-sm-6
+                  .form-group
+                    .col-md-12
+                      %input#companyname.form-control{:name => "name", :placeholder => "Company Name", :type => "text"}/
+                .col-sm-6
+                  .form-group
+                    .col-md-12
+                      %input#email.form-control{:name => "email", :placeholder => "Email Address", :type => "text"}/
+                .col-lg-12
+                  .form-group
+                    .col-md-12
+                      %textarea#message.form-control{:name => "message", :placeholder => "Enter your massage for us here. We will get back to you within 2 business days.", :rows => "7"}
+                  .form-group
+                    .col-md-12
+                      %button.btn.btn-primary.btn-lg{:type => "submit"} Enviar
+/ /.main-container
+//= render 'partials/wppcontact'

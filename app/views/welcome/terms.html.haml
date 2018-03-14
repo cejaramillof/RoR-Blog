@@ -1,0 +1,18 @@
+.intro-inner
+  .about-intro.about-parallax-bottom
+    .dtable.hw100
+      .dtable-cell.hw100
+        .container.text-center
+          %h1.intro-title.animated.fadeInDown Terms and Conditions
+  / /.about-intro
+/ /.intro-inner
+.main-container.inner-page
+  .container
+    .section-content
+      .row
+        %h2.text-center.title-1= @post.title
+        %hr.center-block.small.text-hr
+        .container-content
+          .inner-box
+            =@post.body
+= render 'partials/webstats'

@@ -2,12 +2,16 @@
 
 one:
   title: MyText
+  body: MyText
   free: false
+  guest: false
   athlete: false
   advised: false
 
 two:
   title: MyText
+  body: MyText
   free: false
+  guest: false
   athlete: false
   advised: false
