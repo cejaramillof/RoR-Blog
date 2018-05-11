@@ -13,6 +13,10 @@
         margin-top: 15px;
         padding-bottom: 0;
         padding-top: 0;
+        a {
+
+          margin-right: 5px;
+        }
     }
 }
 .blog-post-content-desc {
@@ -42,7 +46,7 @@
     padding-bottom: 30px;
     margin-bottom: 20px;
     a {
-        color: #9a9a9a;
+        /* color: #9a9a9a; */
     }
 }
 .blog-post-bottom {
@@ -97,6 +101,7 @@
     padding-top: 20px;
 }
 .blogs-comment-list {
+    margin-left: -30px;
     ul {
         list-style: outside none none;
         margin: 0;
@@ -104,7 +109,7 @@
     }
     > li {
         border-bottom: $border;
-        margin: 0 0 25px;
+        margin: 0 0 0px;
         > ul {
             padding: 0 0 0 120px;
             li {
@@ -238,8 +243,8 @@
         width: 50px;
     }
     .blogs-comment-date {
-        display: block;
         margin: 0;
+        margin-left: 5px;
     }
     .blog-post-content-desc h2 {
         font-size: 20px;

@@ -10,13 +10,13 @@
       .col-md-4
         .contact_info
           %h5.list-title.gray
-            %strong Contact us
+            %strong Encuéntranos
           .contact-info
             .address
-              %p.p1 220 Fifth Ave
-              %p.p1 2nd Flr. New York, NY 10001
-              %p Email: info@@demos.org
-              %p Toll Free: 212-633-1405
+              %p.p1 Calle 1A #1 - 1
+              %p.p1 Armenia, Quindío. Colombia
+              %p Email: profe@email.com
+              %p Whatsapp: +57 301 000 00 00
               %p  
               %div
                 %p
@@ -32,45 +32,42 @@
                   %strong
                     %a{:href => "faq.html"} Knowledge Base
           .social-list
-            %a{:href => "https://www.pinterest.com/", :target => "_blank"}
+            %a{:href => "mailto:correo@gmail.com", :target => "_blank"}
+              %i.fa.fa-envelope.fa-lg
+            %a{:href => "https://api.whatsapp.com/send?phone=573014263898", :target => "_blank"}
               %i.fa.fa-whatsapp.fa-lg
-            %a{:href => "https://plus.google.com", :target => "_blank"}
-              %i.fa.fa-instagram.fa-lg
             %a{:href => "https://twitter.com/", :target => "_blank"}
               %i.fa.fa-youtube-play.fa-lg
             %a{:href => "https://www.facebook.com/", :target => "_blank"}
               %i.fa.fa-facebook.fa-lg
             %a{:href => "https://twitter.com/", :target => "_blank"}
               %i.fa.fa-twitter.fa-lg
-            %a{:href => "https://www.pinterest.com/", :target => "_blank"}
-              %i.fa.fa-envelope.fa-lg
+            %a{:href => "https://instagram.com", :target => "_blank"}
+              %i.fa.fa-instagram.fa-lg
+          %br/
       .col-md-8
         .contact-form
           %h5.list-title.gray
-            %strong Contact us
+            %strong Escríbenos
           %form.form-horizontal{:method => "post"}
             %fieldset
               .row
+                .col-sm-12
+                  .form-group
+                    .col-md-12
+                      %input#firstname.form-control{:name => "name", :placeholder => "Nombre", :type => "text"}/
                 .col-sm-6
                   .form-group
                     .col-md-12
-                      %input#firstname.form-control{:name => "name", :placeholder => "First Name", :type => "text"}/
+                      %input#lastname.form-control{:name => "name", :placeholder => "Correo", :type => "text"}/
                 .col-sm-6
                   .form-group
                     .col-md-12
-                      %input#lastname.form-control{:name => "name", :placeholder => "Last  Name", :type => "text"}/
-                .col-sm-6
-                  .form-group
-                    .col-md-12
-                      %input#companyname.form-control{:name => "name", :placeholder => "Company Name", :type => "text"}/
-                .col-sm-6
-                  .form-group
-                    .col-md-12
-                      %input#email.form-control{:name => "email", :placeholder => "Email Address", :type => "text"}/
+                      %input#companyname.form-control{:name => "name", :placeholder => "Teléfono", :type => "number"}/
                 .col-lg-12
                   .form-group
                     .col-md-12
-                      %textarea#message.form-control{:name => "message", :placeholder => "Enter your massage for us here. We will get back to you within 2 business days.", :rows => "7"}
+                      %textarea#message.form-control{:name => "message", :placeholder => "Escribe tu mensaje aquí. Te responderemos en breve.", :rows => "7"}
                   .form-group
                     .col-md-12
                       %button.btn.btn-primary.btn-lg{:type => "submit"} Enviar

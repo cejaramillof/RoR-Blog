@@ -1,0 +1,82 @@
+%aside
+  .inner-box
+    .categories-list.list-filter
+      %h5.list-title.uppercase
+        %strong
+          %a{:href => "#"} Categorias
+      %ul.list-unstyled.list-border
+        %li
+          =link_to posts_path(type: 'motivacion') do
+            %span.title Motivación
+            %ul.list-unstyled.list-border
+              - @categories.motivacion.each do |category|
+                %li
+                  =link_to posts_path(category_id: category.id) do
+                    %span.title=category.name
+        %li
+          =link_to posts_path(type: 'recuperacion') do
+            %span.title Recuperación
+            %ul.list-unstyled.list-border
+              - @categories.recuperacion.each do |category|
+                %li
+                  =link_to posts_path(category_id: category.id) do
+                    %span.title=category.name
+        %li
+          =link_to posts_path(type: 'nutricion') do
+            %span.title Nutrición
+            %ul.list-unstyled.list-border
+              - @categories.nutricion.each do |category|
+                %li
+                  =link_to posts_path(category_id: category.id) do
+                    %span.title=category.name
+        %li
+          =link_to posts_path(type: 'entrenamiento') do
+            %span.title Entrenamiento
+            %ul.list-unstyled.list-border
+              - @categories.entrenamiento.each do |category|
+                %li
+                  =link_to posts_path(category_id: category.id) do
+                    %span.title=category.name
+    / /.categories-list
+    .categories-list.list-filter
+      %h5.list-title.uppercase
+        %strong
+          %a{:href => "#"}
+            Ultimos
+      .blog-popular-content
+        - @posts.each do |post|
+          - if current_user && post.try(current_user.role.to_sym) || current_user.try(:admin?)
+            .item-list
+              .col-sm-4.col-xs-4.no-padding.photobox
+                .add-image
+                  =link_to post do
+                    %img.no-margin{:alt => "img", :src => "#{post.cover}"}/
+              / /.photobox
+              .col-sm-8.col-xs-8.add-desc-box
+                .add-details
+                  %h5.add-title
+                    =link_to post do
+                      = post.title
+                  %span.info-row
+                    %span.date
+                      %i.icon-clock
+                      = post.created_at.strftime("%d/%m/%y")
+          -elsif (!current_user)
+            .item-list
+              .col-sm-4.col-xs-4.no-padding.photobox
+                .add-image
+                  =link_to post do
+                    %img.no-margin{:alt => "img", :src => "#{post.cover}"}/
+              / /.photobox
+              .col-sm-8.col-xs-8.add-desc-box
+                .add-details
+                  %h5.add-title
+                    =link_to post do
+                      = post.title
+                  %span.info-row
+                    %span.date
+                      %i.icon-clock
+                      = post.created_at.strftime("%d/%m/%y")
+            / /.add-desc-box
+      %div{:style => "clear:both"}
+      / /.categories-list

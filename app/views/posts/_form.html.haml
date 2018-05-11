@@ -13,16 +13,25 @@
     = f.label :body
     = f.text_area :body
   .field
+    = f.label :cover
+    = f.text_area :cover
+  .field
     = f.label :free
     = f.check_box :free
   .field
     = f.label :guest
-    = f.check_box :guest
+    = f.check_box :guest  
   .field
     = f.label :athlete
     = f.check_box :athlete
   .field
     = f.label :advised
     = f.check_box :advised
+  .field
+    %label Categorías
+    - @categories.each do |category|
+      .field
+        = check_box_tag "categories[]", category.id, @post.categories.include?(category), {:id => dom_id(category, dom_id(@post)) }
+        =f.label category.name, {:for => "#{dom_id(@post)}_category_#{category.id}" }
   .actions
     = f.submit 'Save'

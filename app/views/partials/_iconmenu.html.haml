@@ -8,15 +8,13 @@
           %h3.title-4 Motivación
           %p bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
         %ul#menu1.dropdown-menu.dropdown-center{"aria-labelledby" => "drop1"}
-          %li
-            %a{:href => "#"} Action1
-          %li
-            %a{:href => "#"} Another action
-          %li
-            %a{:href => "#"} Something else here
+          - @categories.motivacion.each do |category|
+            %li
+              =link_to posts_path(category_id: category.id) do
+                =category.name
           %li.divider{:role => "separator"}
           %li
-            %a{:href => "#"} Separated link
+            =link_to 'Motivación', posts_path(type: 'motivacion')
       .col-xs-6.col-sm-3.xs-gap.dropdown
         .inner#drop2{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown"}
           .icon-box-wrap
@@ -24,15 +22,13 @@
           %h3.title-4 Recuperación
           %p bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
         %ul#menu1.dropdown-menu.dropdown-center{"aria-labelledby" => "drop2"}
-          %li
-            %a{:href => "#"} Action2
-          %li
-            %a{:href => "#"} Another action
-          %li
-            %a{:href => "#"} Something else here
+          - @categories.recuperacion.each do |category|
+            %li
+              =link_to posts_path(category_id: category.id) do
+                =category.name
           %li.divider{:role => "separator"}
           %li
-            %a{:href => "#"} Separated link
+            =link_to 'Recuperación', posts_path(type: 'recuperacion')
       .col-xs-6.col-sm-3.xs-gap.dropdown
         .inner#drop3{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown"}
           .icon-box-wrap
@@ -40,15 +36,13 @@
           %h3.title-4 Nutrición
           %p bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
         %ul#menu1.dropdown-menu.dropdown-center{"aria-labelledby" => "drop3"}
-          %li
-            %a{:href => "#"} Action3
-          %li
-            %a{:href => "#"} Another action
-          %li
-            %a{:href => "#"} Something else here
+          - @categories.nutricion.each do |category|
+            %li
+              =link_to posts_path(category_id: category.id) do
+                =category.name
           %li.divider{:role => "separator"}
           %li
-            %a{:href => "#"} Separated link
+            =link_to 'Nutrición', posts_path(type: 'nutricion')
       .col-xs-6.col-sm-3.xs-gap.dropdown
         .inner#drop4{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown"}
           .icon-box-wrap
@@ -56,12 +50,10 @@
           %h3.title-4 Entrenamiento
           %p bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
         %ul#menu1.dropdown-menu.dropdown-center{"aria-labelledby" => "drop4"}
-          %li
-            %a{:href => "#"} Action4
-          %li
-            %a{:href => "#"} Another action
-          %li
-            %a{:href => "#"} Something else here
+          - @categories.entrenamiento.each do |category|
+            %li
+              =link_to posts_path(category_id: category.id) do
+                =category.name
           %li.divider{:role => "separator"}
           %li
-            %a{:href => "#"} Separated link
+            =link_to 'Entrenamiento', posts_path(type: 'entrenamiento')

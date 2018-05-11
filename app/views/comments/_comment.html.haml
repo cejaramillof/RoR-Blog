@@ -1,0 +1,28 @@
+%ul.blogs-comment-list
+  %li
+    .blogs-comment-wrapper
+      .blogs-comment-details
+        .blogs-comment-name
+          %a{:href => "#"}= comment.user.email.split("@").first
+          %span.blogs-comment-date Enviado hace #{time_ago_in_words(comment.created_at)}
+          -if current_user.try(:admin?)
+            =link_to comment, method: :delete, data: { confirm: '¿Estas seguro' }, class: 'text-danger' do
+              %span.fa.fa-trash
+        .blogs-comment-description
+          %p
+            = comment.body
+        -if current_user && comment.commentable_type == "Post"
+          .blogs-comment-replyx
+            = form_for [comment, Comment.new] do |f|
+              = f.text_area :body, required: true, placeholder: "Añade una respuesta..", class: 'form-control'
+              = f.hidden_field :user_id, :value => current_user.id
+              %br/
+              .text-right
+                -if current_user.try(:admin?)
+                  -if comment.unread?
+                    =link_to 'No-Resuelto', read_comment_path(comment.id), method: :put, class: 'btn-danger btn btn-sm'
+                  -else
+                    =link_to 'Resuelto', unread_comment_path(comment.id), method: :put , class: 'btn-primary btn btn-sm'
+                = f.submit "Responder", class: 'btn-success btn btn-sm'
+          %ul
+            = render partial: 'comments/comment', collection: comment.comments

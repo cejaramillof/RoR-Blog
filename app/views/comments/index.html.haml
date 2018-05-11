@@ -1,0 +1,4 @@
+%ul
+  - @comments.each do |comment|
+    -if comment.commentable_type == "Post"
+      %li= link_to comment.body, comment.commentable

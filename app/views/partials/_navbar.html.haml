@@ -41,40 +41,40 @@
                   Motivación
                   %span.caret
                 %ul.dropdown-menu
-                  %li
-                    %a{:href => "#", :tabindex => "-1"} 2nd level dropdown
-                  %li
-                    %a{:href => "#", :tabindex => "-1"} 2nd level dropdown
+                  - @categories.motivacion.each do |category|
+                    %li
+                      =link_to posts_path(category_id: category.id) do
+                        =category.name
               %li.dropdown-submenu
                 %a.test{:tabindex => "-1"}
                   %i.fa.fa-medkit.fa-fw
                   Recuperación
                   %span.caret
                 %ul.dropdown-menu
-                  %li
-                    %a{:href => "#", :tabindex => "-1"} 2nd level dropdown
-                  %li
-                    %a{:href => "#", :tabindex => "-1"} 2nd level dropdown
+                  - @categories.recuperacion.each do |category|
+                    %li
+                      =link_to posts_path(category_id: category.id) do
+                        =category.name
               %li.dropdown-submenu
                 %a.test{:tabindex => "-1"}
                   %i.fa.fa-cutlery.fa-fw
                   Nutrición
                   %span.caret
                 %ul.dropdown-menu
-                  %li
-                    %a{:href => "#", :tabindex => "-1"} 2nd level dropdown
-                  %li
-                    %a{:href => "#", :tabindex => "-1"} 2nd level dropdown
+                  - @categories.nutricion.each do |category|
+                    %li
+                      =link_to posts_path(category_id: category.id) do
+                        =category.name
               %li.dropdown-submenu
                 %a.test{:tabindex => "-1"}
                   %i.fa.fa-male.fa-fw
                   Entrenamiento
                   %span.caret
                 %ul.dropdown-menu
-                  %li
-                    %a{:href => "#", :tabindex => "-1"} 2nd level dropdown
-                  %li
-                    %a{:href => "#", :tabindex => "-1"} 2nd level dropdown
+                  - @categories.entrenamiento.each do |category|
+                    %li
+                      =link_to posts_path(category_id: category.id) do
+                        =category.name
 
           %li.postadd
             %a.btn.btn-block.btn-border.btn-post.btn-danger{:href => "post-ads.html"} ¿PREPARADO/A?

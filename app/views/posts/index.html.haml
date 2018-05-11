@@ -1,31 +1,126 @@
-%h1 Listing posts
-
-%table
-  %thead
-    %tr
-      %th Title
-      %th Body
-      %th Free
-      %th Guest
-      %th Athlete
-      %th Advised
-      %th
-      %th
-      %th
-
-  %tbody
-    - @posts.each do |post|
-      %tr
-        %td= post.title
-        %td= post.body
-        %td= post.free
-        %td= post.guest
-        %td= post.athlete
-        %td= post.advised
-        %td= link_to 'Show', post
-        %td= link_to 'Edit', edit_post_path(post)
-        %td= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' }
-
-%br
-
-= link_to 'New Post', new_post_path
+.main-container.inner-page
+  .container
+    .section-content
+      .row
+        .col-sm-8.blogLeft          
+          .blog-post-wrapper
+            - @posts.each do |post|
+              - if current_user && post.try(current_user.role.to_sym) || current_user.try(:admin?)
+                %article.blog-post-item
+                .inner-box
+                  / blog image
+                  .blog-post-img
+                    =link_to post do
+                      %figure
+                        %img.img-responsive{:alt => "blog-post image", :src => "#{post.cover}"}/
+                  / blog content
+                  .blog-post-content-desc
+                    %span.info-row.blog-post-meta
+                      %span.date
+                        %i.icon-clock
+                        = post.created_at.strftime("%d/%m/%y")
+                      %br
+                      -if current_user.try(:admin?)
+                        .text-right
+                          %span.item-location
+                            -if post.free
+                              %span No-Registrado:
+                              %i.fa.fa-check
+                          %span.item-location
+                            -if post.guest
+                              %span Registrado:
+                              %i.fa.fa-check
+                          %span.item-location
+                            -if post.athlete
+                              %span Atletas:
+                              %i.fa.fa-check
+                          %span.item-location
+                            -if post.advised
+                              %span Asesorado:
+                              %i.fa.fa-check
+                    //%span.author
+                    //  %i.fa.fa-user
+                    //  %a{:href => "#", :rel => "author", :title => "Posts by Jhon Doe"}
+                    //    Jhon
+                    //    Doe
+                    // \-
+                    //%span.item-location
+                    //  %i.fa.fa-comments
+                    //  Comments
+                    //  %a{:href => "#"} 0
+                    .blog-post-content
+                      %h2
+                        =link_to post do
+                          = post.title
+                      %p= post.body.truncate(285, separator: ' ')
+                      .row
+                        .col-md-12.clearfix.blog-post-bottom
+                          =link_to 'Leer más', post, class: 'btn btn-primary pull-right'
+                          -if current_user.try(:admin?)
+                            =link_to 'Eliminar', post, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger pull-left'
+                            =link_to 'Editar', edit_post_path(post), class: 'btn btn-outline-primary pull-left'
+              - elsif (!current_user) && post.try(:guest)
+                %article.blog-post-item
+                .inner-box
+                  / blog image
+                  .blog-post-img
+                    =link_to post do
+                      %figure
+                        %img.img-responsive{:alt => "blog-post image", :src => "#{post.cover}"}/
+                  / blog content
+                  .blog-post-content-desc
+                    %span.info-row.blog-post-meta
+                      %span.date
+                        %i.icon-clock
+                        = post.created_at.strftime("%d/%m/%y")
+                      %br
+                      -if current_user.try(:admin?)
+                        .text-right
+                          %span.item-location
+                            -if post.free
+                              %span No-Registrado:
+                              %i.fa.fa-check
+                          %span.item-location
+                            -if post.guest
+                              %span Registrado:
+                              %i.fa.fa-check
+                          %span.item-location
+                            -if post.athlete
+                              %span Atletas:
+                              %i.fa.fa-check
+                          %span.item-location
+                            -if post.advised
+                              %span Asesorado:
+                              %i.fa.fa-check
+                    //%span.author
+                    //  %i.fa.fa-user
+                    //  %a{:href => "#", :rel => "author", :title => "Posts by Jhon Doe"}
+                    //    Jhon
+                    //    Doe
+                    // \-
+                    //%span.item-location
+                    //  %i.fa.fa-comments
+                    //  Comments
+                    //  %a{:href => "#"} 0
+                    .blog-post-content
+                      %h2
+                        =link_to post do
+                          = post.title
+                      %p= post.body.truncate(285, separator: ' ')
+                      .row
+                        .col-md-12.clearfix.blog-post-bottom
+                          =link_to 'Leer más', post, class: 'btn btn-primary pull-right'
+                          -if current_user.try(:admin?)
+                            =link_to 'Eliminar', post, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger pull-left'
+                            =link_to 'Editar', edit_post_path(post), class: 'btn btn-outline-primary pull-left'
+          .text-center
+            -if current_user.try(:admin?)
+              = link_to 'Nuevo Post', new_post_path, class: 'btn btn-primary'
+            -if user_signed_in?
+              = link_to('Logout', destroy_user_session_path, method: :delete)
+          / /.blog-post-wrapper
+        / blogLeft
+        .col-sm-4.blogRight.page-sidebar
+          =render 'posts/right'
+        / page-sidebar
+/ /.main-container

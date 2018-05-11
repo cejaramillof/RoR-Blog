@@ -4,17 +4,31 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
+    @categories = Category.all
     @posts = Post.all
+
+    if params[:type]
+      # @posts = instance_variable_get("@#{params[:type]}")
+      @posts = Post.joins(:categories).where(categories: { kind: Category.kinds[params[:type].intern] }).uniq
+    end
+
+    if params[:category_id]
+      # @posts = instance_variable_get("@#{params[:type]}")
+      @posts = Category.find_by_id(params[:category_id]).posts
+    end
+
   end
 
   # GET /posts/1
   # GET /posts/1.json
   def show
+    @posts = Category.find_by_id(@post.category_ids).posts
   end
 
   # GET /posts/new
   def new
     @post = Post.new
+    @categories = Category.all
   end
 
   # GET /posts/1/edit
@@ -24,7 +38,9 @@ class PostsController < ApplicationController
   # POST /posts
   # POST /posts.json
   def create
+
     @post = Post.new(post_params)
+    @post.categories = params[:categories]
 
     respond_to do |format|
       if @post.save
@@ -42,6 +58,7 @@ class PostsController < ApplicationController
   def update
     respond_to do |format|
       if @post.update(post_params)
+        @post.categories = params[:categories]
         format.html { redirect_to @post, notice: 'Post was successfully updated.' }
         format.json { render :show, status: :ok, location: @post }
       else
@@ -69,6 +86,6 @@ class PostsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def post_params
-      params.require(:post).permit(:title, :body, :free, :guest, :athlete, :advised)
+      params.require(:post).permit(:title, :body, :free, :guest, :athlete, :advised, :categories, :cover, :permit)
     end
 end

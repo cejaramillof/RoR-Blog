@@ -25,6 +25,10 @@ gem 'haml-rails'
 gem 'font-awesome-rails'
 #to easy js
 gem 'jquery-rails'
+#to login
+gem 'devise'
+#maquina de estados
+gem 'aasm'
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
